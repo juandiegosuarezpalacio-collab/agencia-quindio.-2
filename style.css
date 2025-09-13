@@ -1,0 +1,29 @@
+:root{--mc:#0b3a7e;--ac:#ffd221}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background-image: linear-gradient(180deg,#f6f8ff 0%,#ffffff 60%), radial-gradient(rgba(11,58,126,.06) 1px, transparent 1px);
+  background-size: auto, 22px 22px; background-attachment: fixed, fixed;
+  color:#0f172a;
+}
+section{background:rgba(255,255,255,.86);backdrop-filter:saturate(140%) blur(3px)}
+.card{box-shadow:0 8px 24px rgba(0,0,0,.08);transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.12)}
+.badge{background:var(--ac);color:#0b0b0b}
+.nav{position:sticky;top:0;background:#ffffffdd;backdrop-filter:saturate(180%) blur(6px);z-index:50;border-bottom:1px solid #e5e7eb}
+.nav a{padding:.75rem 1rem;display:block;border-bottom:2px solid transparent}
+.nav a.active{color:var(--mc);border-bottom-color:var(--mc);font-weight:600}
+section > *{max-width:72rem;margin-left:auto;margin-right:auto}
+
+/* Hero con overlay */
+.hero{min-height:56vh;display:flex;align-items:center;position:relative;color:#fff;background-position:center;background-size:cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(11,58,126,.75))}
+.hero>.inner{position:relative}
+
+/* Marca (logo) */
+.brand-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.92);border:1px solid #e6e8f0;padding:.5rem .75rem;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.brand-logo{height:44px;width:auto;filter:saturate(.9) contrast(.98)}
+.brand-name{font-weight:700;color:#0f172a}
+
+.muted{color:#475569}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;border-radius:12px;padding:.75rem 1rem}
